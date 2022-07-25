@@ -21,7 +21,7 @@ public class PowerAlgo{
       
       int iterationsDesired = 1000000;// <--- CHANGE THIS NUMBER for iteration change.
                                      // for me, 1 million elections takes 1 minute.
-                                     // 2 million took 1:50
+                                     // 3 million took 2:53 on an i5-8350U. Obviously single threaded.
       
       int iterationsDone = 0;
       
