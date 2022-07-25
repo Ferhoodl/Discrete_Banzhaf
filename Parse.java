@@ -4,8 +4,6 @@ import java.util.Scanner; // Import the Scanner class to read text files
 import java.util.ArrayList;
 
 /*
-Updated on July 24, 2022
-
 Objective: Take in a file and return State objects from State.java that contain the state names and number of
 electoral votes in that file, so that they can be processed by PowerAlgo.java to determine the Banzahf Power
 Index values of each state.
