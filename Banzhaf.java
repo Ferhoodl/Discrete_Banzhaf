@@ -18,7 +18,8 @@ public class Banzhaf{
       states = PowerAlgo.crunch(states);
       
       // print out the states and power indexes
-      System.out.println("The Banzahf Power Index of each state is as follows:");
+
+      System.out.println("The Banzhaf Power Index of each state is as follows:");
       for(State state : states){
          System.out.println(state.getName() + ": " + state.getIndex());
       }
