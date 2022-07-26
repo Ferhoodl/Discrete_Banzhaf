@@ -8,7 +8,7 @@ values is applied. An arraylist with each state's power index value is filled in
 to the console.
 */
 
-public class Banzahf{
+public class Banzhaf{
    public static void main(String args[]){
    
       // create a list of states that contains names and electoral votes values
