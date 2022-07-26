@@ -13,7 +13,7 @@ values is applied. An arraylist with each state's power index value is filled in
 to the console.
 */
 
-public class Banzahf{
+public class Banzhaf{
    public static void main(String args[]){
    
       // create a list of states that contains names and electoral votes values
@@ -23,7 +23,7 @@ public class Banzahf{
       states = PowerAlgo.crunch(states);
       
       // print out the states and power indexes
-      System.out.println("The Banzahf Power Index of each state is as follows:");
+      System.out.println("The Banzhaf Power Index of each state is as follows:");
       for(State state : states){
          System.out.println(state.getName() + ": " + state.getIndex());
       }
