@@ -3,7 +3,7 @@ import java.util.ArrayList; // Lets our program use arraylists
 /*
 Objective: This is the main class. It tells the Parser class to turn a text file of states and electoral votes
 into an arraylist of State objects with names and votes values filled in, but Banzahf Power Index values
-missing. Then, the arraylist is sent to the PowerAlgo class, where our algorith to approximate the Banzahf
+missing. Then, the arraylist is sent to the PowerAlgo class, where our algorith to approximate the Banzhaf
 values is applied. An arraylist with each state's power index value is filled in, and the values are printed
 to the console.
 */

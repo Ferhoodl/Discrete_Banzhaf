@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 /*
 Objective: Take in a file and return State objects from State.java that contain the state names and number of
-electoral votes in that file, so that they can be processed by PowerAlgo.java to determine the Banzahf Power
+electoral votes in that file, so that they can be processed by PowerAlgo.java to determine the Banzhaf Power
 Index values of each state.
 */
 
