@@ -19,9 +19,11 @@ public class Parse{
       Scanner myReader = new Scanner(myObj);
       while (myReader.hasNextLine()) {// loop for every line of the text file
          String data = myReader.nextLine(); // get new line of data
+         /*
          if(!data.contains("=")){ // if at the end of the file, exit
             break;
          }
+         */
          String[] dataSplit = data.split("=", 2); // split line into an arrya of length 2 by the "=" in the file
          String name = dataSplit[0]; // name is first thing in array
          int votes = Integer.parseInt(dataSplit[1]); // votes is second thing in array
