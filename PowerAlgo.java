@@ -1,12 +1,9 @@
 /*
-Updated on July 24, 2022
-
 Objective: Determine Banzahf Power Index of each state. This class takes in an arraylist of State objects from
 the Parser class that has each state's name and number of electoral votes filled in. This class currently
 does its best to approximate each state's Banzahf Power Index value by creating a configurable number of
 randomly generated elections, and executing the Banzahf algorithm on a small share of the actual number of
 posible elections. It returns the arraylist with the power index values filled in for each state.
-
 */
 
 import java.util.ArrayList;
@@ -23,7 +20,8 @@ public class PowerAlgo{
       double totalIndex = 0;
       
       int iterationsDesired = 1000000;// <--- CHANGE THIS NUMBER for iteration change.
-                                     // for me, 1 million elections takes 3.5 minutes.
+                                     // for me, 1 million elections takes 1 minute.
+                                     // 3 million took 2:53 on an i5-8350U. Obviously single threaded.
       
       int iterationsDone = 0;
       

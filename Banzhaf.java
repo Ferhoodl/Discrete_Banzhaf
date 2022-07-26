@@ -1,11 +1,6 @@
-import java.io.File;  // Import the File class
-import java.io.FileNotFoundException;  // Import this class to handle errors
-import java.util.Scanner; // Import the Scanner class to read text files
-import java.util.ArrayList; // Let our program use arraylists
+import java.util.ArrayList; // Lets our program use arraylists
 
 /*
-Updated on July 24, 2022
-
 Objective: This is the main class. It tells the Parser class to turn a text file of states and electoral votes
 into an arraylist of State objects with names and votes values filled in, but Banzahf Power Index values
 missing. Then, the arraylist is sent to the PowerAlgo class, where our algorith to approximate the Banzahf
@@ -23,6 +18,7 @@ public class Banzhaf{
       states = PowerAlgo.crunch(states);
       
       // print out the states and power indexes
+
       System.out.println("The Banzhaf Power Index of each state is as follows:");
       for(State state : states){
          System.out.println(state.getName() + ": " + state.getIndex());
