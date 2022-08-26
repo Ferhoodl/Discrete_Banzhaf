@@ -1,9 +1,9 @@
 /*
-Objective: Determine Banzhaf Power Index of each state. This class takes in an arraylist of State objects from
+Objective: Determine Banzhaf Ratio of each state. This class takes in an arraylist of State objects from
 the Parser class that has each state's name and number of electoral votes filled in. This class currently
-does its best to approximate each state's Banzhaf Power Index value by creating a configurable number of
+does its best to approximate each state's Banzhaf Ratio by creating a configurable number of
 randomly generated elections, and executing the Banzahf algorithm on a small share of the actual number of
-posible elections. It returns the arraylist with the power index values filled in for each state.
+posible elections. It returns the arraylist with the ratio filled in for each state.
 */
 
 import java.util.ArrayList;
@@ -54,7 +54,7 @@ public class PowerAlgo{
          totalIndex += state.getIndex();
       }
 
-      for(State state : states){ // divide every index by total index to get fraction (which is actual power index)
+      for(State state : states){ // divide every index by total index to get fraction (which is actual ratio)
          state.setIndex(state.getIndex()/totalIndex);
       }
       return states;
