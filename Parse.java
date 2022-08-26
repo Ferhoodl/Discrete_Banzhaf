@@ -5,8 +5,7 @@ import java.util.ArrayList;// Lets our program use arraylists
 
 /*
 Objective: Take in a file and return State objects from State.java that contain the state names and number of
-electoral votes in that file, so that they can be processed by PowerAlgo.java to determine the Banzhaf Power
-Index values of each state.
+electoral votes in that file, so that they can be processed by PowerAlgo.java to determine the Banzhaf Ratio of each state.
 */
 
 public class Parse{
@@ -35,6 +34,6 @@ public class Parse{
       System.out.println("An error occurred.");
       e.printStackTrace();
     }
-   return states; // return the states list with the power indexes filled in
+   return states; // return the states list with the Ratio filled in
    }
 }
