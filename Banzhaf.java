@@ -4,10 +4,9 @@ import java.util.ArrayList; // Lets our program use arraylists
 
 /*
 Objective: This is the main class. It tells the Parser class to turn a text file of states and electoral votes
-into an arraylist of State objects with names and votes values filled in, but the values
-missing. Then, the arraylist is sent to the PowerAlgo class, where our algorith to approximate the Banzhaf
-values is applied. An arraylist with each state's value is filled in, and the values are printed
-to the console.
+into an arraylist of State objects with names and votes values filled in, but the Banzhaf Actual Voting Power of Each State
+missing. Then, the arraylist is sent to the PowerAlgo class, where our algorith to approximate the Banzhaf Actual Voting Power of Each State is applied. 
+An arraylist with each state's Actual Voting Power is filled in, and the Banzhaf Actual Voting Power of Each State is printed to the console.
 */
 
 public class Banzhaf{
