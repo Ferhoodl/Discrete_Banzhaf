@@ -1,7 +1,7 @@
 /*
-Objective: Provide a framework for state data to be stored to determine the Banzhaf Power index of each one. Currently, State
+Objective: Provide a framework for state data to be stored to determine the Banzhaf Actual Voting Power of Each State. Currently, State
 objects are passed around in an arrayllist to add data to the states. First at Parser, to get the data held in the state.txt
-file, and then to the PowerAlgo, which does the heavy lifting with the algorithm to determine the ratio of each state.
+file, and then to the PowerAlgo, which does the heavy lifting with the algorithm to determine the Banzhaf Actual Voting Power of Each State.
 */
 public class State{
 
