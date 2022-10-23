@@ -15,8 +15,12 @@ public class Banzhaf{
       // create a list of states that contains names and electoral votes values
       ArrayList<State> states = Parse.parse("states.txt");
       
+      // Number of elections to simulate with this program
+      int electionIterations = 1000000;// for me, 1 million elections takes 1 minute.
+                                   // 3 million took 2:53 with a single thread of a n intel i5-8350U
+
       // take that list of states and fill in the proper powerIndex values
-      states = PowerAlgo.crunch(states);
+      states = PowerAlgo.crunch(states, electionIterations);
       
       // print out the states and power indexes
 
