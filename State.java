@@ -7,11 +7,13 @@ public class State{
 
    private String name;
    private int votes;
+   private int power;
    private double powerIndex;
    
    State(String n, int v){ // constructor. Runs when a state object is created.
       name = n;
       votes = v;
+      power = 0;
       powerIndex = 0;
    }
    
@@ -31,15 +33,23 @@ public class State{
       votes = v;
    }
    
+   public int getPower(){
+      return power;
+   }
+   
+   public void setPower(int p){
+      power = p;
+   }
+   
    public double getIndex(){ // get power index
       return powerIndex;
    }
    
-   public void setIndex(double index){ // set power index directly
-      powerIndex = index;
+   public void setIndex(double pIndex){ // set power index directly
+      powerIndex = pIndex;
    }
    
-   public void addToPI(int inc){ // add to power index (will be used a lot: Every time)
-      powerIndex += inc;    // a state can cause a swing in voting decision)
+   public void addToPow(int inc){ // add to power index (will be used a lot: Every time)
+      power += inc;    // a state can cause a swing in voting decision)
    }
 }

@@ -9,6 +9,13 @@ posible elections. It returns the arraylist with the Banzhaf Actual Voting Power
 import java.util.ArrayList;
 
 public class PowerAlgo{
+
+   static double totalPower = 0;
+   
+   public static double getTotalPower(){
+      return totalPower;
+   }
+   
    public static ArrayList<State> crunch(ArrayList<State> states, int iters){
       
       // list of states in a coalition
@@ -17,7 +24,7 @@ public class PowerAlgo{
       // total electoral votes of a coalition
       int voteCount;
       
-      double totalIndex = 0;
+      
       
       int iterationsDesired = iters; // <--- CHANGE THIS NUMBER for iteration change.
                                      // for me, 1 million elections takes 1 minute. 3 million took 2:53 with a single thread of a n intel i5-8350U
@@ -41,7 +48,7 @@ public class PowerAlgo{
          
          for(State state : coalition){ // this for loop looks at each state and checks to see if it changes the outcome of the election.
             if ((voteCount - 2*state.getVotes()) < 270){// if the election is changed, add one to that state's total number of swings
-               state.addToPI(1);                               // a fish my sister made:    <O|||>{
+               state.addToPow(1);                               // a fish my sister made:    <O|||>{
             }
          }
          iterationsDone = iterationsDone + 1;
@@ -49,11 +56,11 @@ public class PowerAlgo{
          System.out.println("% \n");
       }
       for(State state : states){ // add all indexes up for total index
-         totalIndex += state.getIndex();
+         totalPower += state.getPower();
       }
 
       for(State state : states){ // divide every index by total index to get fraction (which is Banzhaf Actual Voting Power of Each State)
-         state.setIndex(state.getIndex()/totalIndex);
+         state.setIndex(state.getPower()/totalPower);
       }
       return states;
    }
