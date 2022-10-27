@@ -47,7 +47,7 @@ public class PowerAlgo{
          }while(voteCount < 270); // make sure that the previo sline adds to 270 or more
          
          for(State state : coalition){ // this for loop looks at each state and checks to see if it changes the outcome of the election.
-            if ((voteCount - 2*state.getVotes()) < 270){// if the election is changed, add one to that state's total number of swings
+            if ((voteCount - state.getVotes()) < 270){// if the election is changed, add one to that state's total number of swings
                state.addToPow(1);                               // a fish my sister made:    <O|||>{
             }
          }
