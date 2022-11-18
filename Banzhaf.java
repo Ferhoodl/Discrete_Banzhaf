@@ -24,13 +24,13 @@ public class Banzhaf{
       
       // print out the states and power indexes
       int totalIndex = 0; // keep track of total number of 
-      System.out.println("The Banzhaf Actual Voting Power of Each State is as follows:");
+      System.out.println("The Banzhaf Power of Each State is as follows:");
       for(State state : states){
          System.out.println(state.getName() + " Normalized INDEX: " + state.getIndex());
          System.out.println(state.getName() + " RAW VALUE: " + state.getPower());
          System.out.println("");
-         totalIndex = totalIndex + (int)PowerAlgo.getTotalPower();
+         totalIndex += ((int)state.getIndex() + (int)state.getPower());
       }
-      System.out.println("Total power: " + totalIndex); //owen's divisor
+      System.out.println("Total winning: " + totalIndex);
    }
 }
