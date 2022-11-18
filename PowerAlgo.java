@@ -59,7 +59,7 @@ public class PowerAlgo{
          totalPower += state.getPower();
       }
 
-      for(State state : states){ // divide every index by total index to get fraction (which is Banzhaf Actual Voting Power of Each State)
+      for(State state : states){ // divide every index by total index to get fraction (which is normalized)
          state.setIndex(state.getPower()/totalPower);
       }
       return states;
