@@ -4,9 +4,9 @@ import java.util.ArrayList; // Lets our program use arraylists
 
 /*
 Objective: This is the main class. It tells the Parser class to turn a text file of states and electoral votes
-into an arraylist of State objects with names and votes values filled in, but the Banzhaf Actual Voting Power of Each State
-missing. Then, the arraylist is sent to the PowerAlgo class, where our algorith to approximate the Banzhaf Actual Voting Power of Each State is applied. 
-An arraylist with each state's Actual Voting Power is filled in, and the Banzhaf Actual Voting Power of Each State is printed to the console.
+into an arraylist of State objects with names and votes values filled in, but the Banzhaf normalized of Each State
+missing. Then, the arraylist is sent to the PowerAlgo class, where our algorithm to approximate the Banzhaf normalized of Each State is applied. 
+An arraylist with each state's normalized is filled in, and the Banzhaf normalized of Each State is printed to the console.
 */
 
 public class Banzhaf{
@@ -26,11 +26,11 @@ public class Banzhaf{
       int totalIndex = 0; // keep track of total number of 
       System.out.println("The Banzhaf Actual Voting Power of Each State is as follows:");
       for(State state : states){
-         System.out.println(state.getName() + " INDEX: " + state.getIndex());
+         System.out.println(state.getName() + " Normalized INDEX: " + state.getIndex());
          System.out.println(state.getName() + " RAW VALUE: " + state.getPower());
          System.out.println("");
          totalIndex = totalIndex + (int)PowerAlgo.getTotalPower();
       }
-      System.out.println("Total power: " + totalIndex);
+      System.out.println("Total power: " + totalIndex); //owen's divisor
    }
 }
