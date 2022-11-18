@@ -1,6 +1,6 @@
 import java.util.ArrayList; // Lets our program use arraylists
 
-//The Actual Voting Power of States is the Total of A State's Winning Coalitions / Number of Winning Coalitions
+//The Normalized Banzhaf Value is the Total of A State's Winning Coalitions / Number of Winning Coalitions
 
 /*
 Objective: This is the main class. It tells the Parser class to turn a text file of states and electoral votes
